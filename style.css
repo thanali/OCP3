@@ -1,0 +1,689 @@
+
+
+/* Général */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Indique au navigateur de prendre en compte que les valeurs spécifiées par la hauteur et largeur des éléments qui composent le bloc */
+}
+
+body {
+	max-width: 1400px;
+	margin: auto; /* Centre la page lorsque la largeur de la fenêtre dépasse 1400px */
+    font-family: 'Raleway', sans-serif; /* Police du document + police générique */
+    font-size: 1em;
+    padding: 0 25px;
+}
+
+h1,
+h2 {
+    cursor: default;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+i {
+    color: #0065FC;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.star-none {
+    color: #D9D9D9;
+}
+
+.currency {
+    font-weight: 700;
+}
+
+
+
+/* Header Logo et navigation */
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 1.3em;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    padding: 40px;
+}
+
+.nav-link:hover {
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+    padding-top: 38px;
+}
+
+
+
+/* Main */
+    /* Barre de recherche */
+
+h1 {
+    margin: 30px 0 10px;
+}
+
+.form p {
+    cursor: default;
+}
+
+.search-bar {
+    display: flex;
+    margin: 25px 0;
+
+}
+
+.search-bar div {
+    display: flex; /* pour placer l'élément icône dans le bloc */
+    justify-content: center; /* pour l' aligner sur l'axe principal */
+    align-items: center; /* pour l'aligner sur l'axe secondaire */
+    background-color: #f2f2f2; 
+    border: 1px solid #f2f2f2;
+    border-radius: 15px 0 0 15px;
+    width: 3em;
+}
+
+.fa-location-dot {
+    color: #000000;
+    font-size: 1.1em; /* dimension icône localisation */
+}
+
+.search-city {
+    border: 1px solid #f2f2f2;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0 15px;
+    height: 3em;
+}
+
+.search-city::placeholder {
+    color: black;
+    opacity: 1; /* pour foncer la couleur de la police dans firefox */
+}
+
+/* Mise en forme du bouton rechercher sur ordinateur et tablette */
+.desktop-submit {
+    background-color: #0065FC;
+    color: white;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #0065FC;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.mobil-submit { /* pour masquer le bouton de recherche pour écran mobile */
+    display: none;
+}
+
+
+
+    /*  Partie filtres et info  */
+
+.filters {
+    display: flex; /* alignement des éléments sur une même ligne par défault */
+    align-items: center; 
+    flex-wrap: wrap; /* possibilité de retour à la ligne */
+    margin-top: 30px;
+    gap: 2em; /* espacement entre les éléments d'un bloc flex */
+}
+
+.filters h2 {
+    font-size: 1.1em;
+}
+
+.filter-select {
+    display: flex;
+    gap: 2em;
+}
+
+/* Conteneur de sélecteur de filtre afin de rendre l'intégralité du bloc cliquable */
+.filter-select a {
+    width: 100%;
+}
+
+.filter-link {
+    background-color: #FFFF;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    padding: 12px 17px;
+    font-weight: 700;
+    font-size: 1em;
+    white-space: nowrap; /* évite le retour à la ligne lors d'espaces dans le bloc */
+}
+
+.filter-link i {
+    font-size: 1.2em;
+}
+
+.filter-link:hover {
+    background-color: #DEEBFF;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    margin: 40px 0;
+    cursor: default;
+}
+
+.info-dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 2px;
+    font-size: 0.7em;
+}
+
+
+
+    /* Conteneur sections hébergements et populaires */
+
+.accomodation-popular {
+    display: flex;
+    gap: 3%;
+}
+
+#accomodation,
+#popular {
+    background-color: #f2f2f2;
+    padding: 35px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.star-rating {
+    font-size: 0.9em;
+    display: flex;  /* pour rapprocher les étoiles les unes des autres */
+}
+
+/* Répartition de la largeur du bloc entre les 2 parties */
+#accomodation {
+    width: 70%;
+}
+
+#popular {
+    width: 30%;
+}
+
+
+
+        /* Section hébergements */
+
+.accomodation-cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1.7em 0;
+    }
+
+.accomodation-cards a {
+    width: 31%;
+}
+
+.accomodation-card {
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    height: 14em; /* pour que les cartes restent toutes à la même hauteur */
+}
+
+.accomodation-card img {
+    border-radius: 20px 20px 0 0;
+    border: 5px solid white;
+    object-fit: cover; /* évite déformation de l'image */
+    width: 100%;
+    height: 62%;
+}
+
+.accomodation-card-info {
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 20px 15px 20px;
+    font-size: 0.9em;
+    height: 38%;
+}
+
+.accomodation-more {
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+
+
+        /* Section populaires */
+
+.popular-title {
+    display: flex;
+    justify-content: space-between; /* pour éloigner le titre et l'icône l'un de l'autre */
+    align-items: center;
+}
+
+.popular-chart {
+    font-size: 1.2em;
+}
+
+.popular-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* pour que le bloc s'étire sur tout l'espace disponible */
+}
+
+.popular-cards a {
+    width: 100%;
+}
+
+.popular-card {
+    background-color: #FFFF;
+    display: flex;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.popular-card img {
+    border-radius: 20px 0 0 20px;
+    border: 5px solid white;
+    object-fit: cover;
+    width: 45%; /* pour la répartition de l'espace dans la carte */
+    height: 10em;
+}
+
+.popular-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px 10px 10px;
+    font-size: 0.9em;
+    gap: 0.5em;
+    width: 55%; /* pour la répartition de l'espace dans la carte */
+}
+
+.popular-card-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+
+
+    /* Section activités */
+
+#activity {
+    margin: 65px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.activity-cards {
+    display: flex;
+    gap: 2.2em;
+    width: 100%;
+}
+
+.activity-cards a {
+    width: 100%;
+}
+
+.activity-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 100%;
+    height: 30em;
+}
+
+.activity-card img {
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    width: 100%;
+    height: 87%;
+}
+
+.activity-title {
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 13%;
+}
+
+
+/* Effets de survol similaires à toutes les cartes */
+.accomodation-card:hover,
+.popular-card:hover,
+.activity-card:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Footer */
+
+.f-lists {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0 70px 0;
+    gap: 1em;
+}
+
+.f-lists div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.f-lists ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.f-lists li {
+    list-style-type: none;
+}
+
+.f-lists h3 {
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+/* Breakpoints : 992px pour les écrans d'ordinateurs et 768px pour les tablettes */
+
+
+/* Media Query pour tablette et écrans d'une largeur minimum de 769px (car le breakpoint est à 768px) et maximum de 992px */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+/* L'espacement entre les filtres est réduit */
+    .filters,
+    .filter-select {
+        gap: 1em;
+    }
+
+/* Les sections hébergements et populaires s'alignent verticalment */
+    .accomodation-popular {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    #accomodation,
+    #popular {
+        width: 100%; /* les blocs s'étirent sur la largeur de la page */
+    }
+
+    .popular-cards {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0; /* annulation du gap spécifié dans la partie desktop */
+    }
+
+    .popular-cards a {
+        width: 31%;
+    }
+
+    .popular-card {
+        height: 100%;
+    }
+
+    .activity-card {
+        height: 20em; /* réduction de la hauteur des cartes */
+    }
+
+/* Révision de la répartition des des éléments contenus dans les cartes */
+    .activity-title {
+        height: 20%;
+    }
+
+    .activity-card img {
+        height: 80%;
+    }
+}
+
+
+
+/* Media Query téléphone et écrans d'une largeur maximum de 768px */
+
+@media screen and (max-width: 768px) {
+    
+    /* Général */
+
+    body {
+        padding: 0; /* Retire le padding de la page générale */
+    }
+
+    .form,
+    .filters,
+    .info,
+    #activity {
+        padding: 0 1.2em; /* ajout padding aux éléments ciblés */
+    }
+
+
+
+    /* Header */
+
+    .header-nav {
+        flex-direction: column; /* barre de navigation se déplace sous le logo */
+        margin-top: 20px;
+    }
+
+    .nav-links {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .nav-link {
+        padding-bottom: 25px;
+        border-bottom: 2px solid #f2f2f2;
+    }
+    
+    .nav-links a {
+        flex: 1;
+    }
+
+    .nav-link:hover {
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+        padding-top: 40px;
+    }
+    
+
+
+/* Barre de recherche */
+
+    h1 {
+        margin-top: 0;
+        padding-top: 30px;
+    }
+
+    .search-bar {
+        margin: 30px 0;
+    }
+
+    .search-city {
+        flex: 1; /* utilise tout l'espace disponible par rapport à son bloc parent, donc ici s'étire sur la largeur de la page */
+    }
+
+    .desktop-submit {
+        display: none; /* pour masquer le bouton de recherche pour les écrans d'ordinateurs et tablettes */    }
+
+    .mobil-submit {
+        display: flex; /* pour rendre visible le bouton de recherche mobile */
+        justify-content: center;
+        align-items: center;
+        width: 4em;
+        background-color: #0065FC;
+        border-radius:  0 15px 15px 0;
+        border: none;
+        cursor: pointer;
+    } 
+
+    .mobil-submit i {
+        color: white;
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+
+
+
+    /* Filtres */
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start; /* pour placer les élements à leur point de départ */
+    }
+    
+    .filter-select {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1em 0;
+        width: 100%;
+    }
+
+    .filter-select a {
+        width: 48%;
+    }
+
+    .filter-link {
+        font-size: 0.9em;
+        gap: 0.5em;
+    }
+
+
+
+    /* Blocs hébergements et populaires */
+
+    .accomodation-popular {
+        flex-direction: column-reverse;
+        gap: initial; /* réinitialise l'espacement entre les blocs */
+    }
+
+    #accomodation,
+    #popular {
+        padding: 2em 1.2em;
+        width: 100%;
+    }
+
+    #popular {
+        border-radius: initial; /* pour retirer le border-radius */
+    }  
+
+    .popular-cards {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .popular-cards a {
+        width: initial;
+    }
+
+    #accomodation {
+        background: none;
+    }
+
+    .accomodation-cards {
+        gap: 0.9em;
+    }
+
+    .accomodation-cards a {
+        width: 100%;
+    }
+
+    .accomodation-more {
+        display: none;
+    }
+
+
+
+    /* Bloc activités */
+
+    .activity-cards {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .accomodation-cards a {
+        width: 100%;
+    }
+
+    .activity-card {
+        height: 12em;
+    }
+
+    .activity-title {
+        height: 30%;
+    }
+
+    .activity-card img {
+        height: 70%;
+    }
+
+
+
+    /* Footer */
+
+    .f-lists {
+        flex-direction: column;
+        padding-left: 40px;
+        gap: 3em;
+    }
+}
+
+
+
+/* Media Query pour les écrans dont la largeur est inférieure à 450px */
+
+@media screen and (max-width: 450px) {
+
+    .filter-link {
+        font-size: 0.7em;
+        padding: 12px 15px;
+    }
+}
